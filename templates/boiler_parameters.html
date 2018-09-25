@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="row">
+    <div class="col-sm-12">
+        <h3>Boiler Parameters</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <h4>Blower On Temperature:</h4>
+        <h4 id="blowerOnTemp" class="params"></h4>
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-8">
+                <form id="increaseMinTemp" method="POST" action="#">
+                    <button type="submit" class="btn-space btn btn-outline-primary btn-block">+</button>
+                </form>
+                <form id="decreaseMinTemp" method="POST" action="#">
+                    <button type="submit" class="btn btn-outline-secondary btn-block">-</button>
+                </form>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <h4>Blower Off Temperature:</h4>
+        <h4 id="blowerOffTemp" class="params"></h4>
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-8">
+                <form id="increaseMaxTemp" method="POST" action="#">
+                    <button type="submit" class="btn btn-outline-primary btn-block">+</button>
+                </form>
+                <form id="decreaseMaxTemp" method="POST" action="#">
+                    <button type="submit" class="btn btn-outline-secondary btn-block">-</button>
+                </form>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <h4>Minimum Blower RPM:</h4>
+        <h4 id="minBlowerRpm" class="params"></h4>
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-8">
+                <form id="increaseMinRpm" method="POST" action="#">
+                    <button type="submit" class="btn btn-outline-primary btn-block">+</button>
+                </form>
+                <form id="decreaseMinRpm" method="POST" action="#">
+                    <button type="submit" class="btn btn-outline-secondary btn-block">-</button>
+                </form>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+
+    </div>
+    <div class="col-sm-6">
+        <h4>Maximum Blower RPM:</h4>
+        <h4 id="maxBlowerRpm" class="params"></h4>
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-8">
+                <form id="increaseMaxRpm" method="POST" action="#">
+                    <button type="submit" class="btn btn-outline-primary btn-block">+</button>
+                </form>
+                <form id="decreaseMaxRpm" method="POST" action="#">
+                    <button type="submit" class="btn btn-outline-secondary btn-block">-</button>
+                </form>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

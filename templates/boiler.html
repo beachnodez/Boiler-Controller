@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="row">
+    <div class="col-sm-4">
+        <h5 id="fireTemp"></h5>
+    </div>
+    <div class="col-sm-4">
+        <h5 id="waterTemp"></h5>
+    </div>
+    <div class="col-sm-4">
+        <h5 id="rpm"></h5>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <canvas id="line-chart" width="600" height="250"></canvas>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <form id="linear" method="POST" action="#">
+            <button type="submit" class="btn btn-block btn-outline-primary">Linear</button>
+        </form>
+    </div>
+    <div class="col-sm-4">
+        <form id="exponential" method="POST" action="#">
+            <button type="submit" class="btn btn-block btn-outline-primary">Exponential</button>
+        </form>
+    </div>
+    <div class="col-sm-4">
+        <form id="sCurve" method="POST" action="#">
+            <button type="submit" class="btn btn-block btn-outline-primary">S-Curve</button>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+        <form id="increaseSlope" method="POST" action="#">
+            <button type="submit" class="btn btn-secondary btn-block">Increase</button>
+        </form>
+    </div>
+    <div class="col-sm-4">
+        <form id="decreaseSlope" method="POST" action="#">
+            <button type="submit" class="btn btn-secondary btn-block">Decrease</button>
+        </form>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+        <form id="editParams" method="POST" action="#">
+            <button type="submit" class="btn btn-outline-success btn-block">Edit Parameters</button>
+        </form>
+    </div>
+    <div class="col-sm-4">
+    </div>
+</div>
+
+{% endblock %}
